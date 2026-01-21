@@ -32,7 +32,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* BANNER (Menyamai Visual Foto) */
         .banner {
             width: 100%;
             height: 300px;
@@ -155,12 +154,12 @@
             <div class="grid-container">
                 <div class="card">
                     <h3>Executive Summary</h3>
-                    <p>Profesional F&B dengan pengalaman lebih dari 5 tahun di bidang operasional restoran, bar, dan manajemen toko[cite: 2]. Ahli dalam manajemen inventaris, pengendalian biaya (Cost Control), dan kepemimpinan tim[cite: 34].</p>
+                    <p>Profesional F&B dengan pengalaman lebih dari 5 tahun di bidang operasional restoran, bar, dan manajemen toko[cite: 2]. Ahli dalam manajemen inventaris, pengendalian biaya (Cost Control), dan kepemimpinan tim.</p>
                 </div>
 
                 <div class="card">
                     <h3>Professional Objective</h3>
-                    <p>Bertekad meningkatkan efisiensi operasional dan pertumbuhan bisnis melalui posisi Food & Beverage Operations atau Store Management yang strategis[cite: 6].</p>
+                    <p>Bertekad meningkatkan efisiensi operasional dan pertumbuhan bisnis melalui posisi Food & Beverage Operations atau Store Management yang strategis.</p>
                 </div>
             </div>
 
