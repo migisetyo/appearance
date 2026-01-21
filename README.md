@@ -3,172 +3,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Profile - Migi Setyo Sugiarto Adi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-dark: #0f172a;
             --accent-blue: #2563eb;
-            --wa-green: #25d366;
+            --wa-green: #22c55e;
             --text-main: #1e293b;
             --text-muted: #64748b;
-            --bg-site: #f1f5f9;
+            --bg-site: #f8fafc;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-site);
             margin: 0;
             padding: 20px;
             display: flex;
             justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         .main-container {
             background: white;
             max-width: 850px;
             width: 100%;
-            border-radius: 20px;
+            border-radius: 32px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
         }
 
-        .banner {
+        /* BANNER - Menggunakan file banner.png Anda */
+        .banner-container {
             width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #2563eb 100%);
-            /* Jika ada file gambar banner, aktifkan baris di bawah ini: */
-            /* background: url('banner.jpg') center/cover no-repeat; */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
+            line-height: 0; /* Menghilangkan celah bawah gambar */
         }
 
-        .banner h1 { font-size: 2.2rem; margin: 0; letter-spacing: -1px; }
-        .banner p { font-size: 1.1rem; opacity: 0.9; margin-top: 10px; font-weight: 300; }
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-        .content { padding: 40px; }
+        .content {
+            padding: 40px;
+        }
 
-        .profile-title { text-align: left; margin-bottom: 30px; }
-        .badge-linkedin {
+        .profile-title {
+            text-align: left;
+            margin-bottom: 35px;
+        }
+
+        .badge-prof {
             display: inline-flex;
             align-items: center;
-            background: #e0f2fe;
-            color: #0369a1;
-            padding: 5px 12px;
+            background: #eff6ff;
+            color: var(--accent-blue);
+            padding: 6px 14px;
             border-radius: 50px;
             font-size: 13px;
             font-weight: 700;
             margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        .profile-name { font-size: 32px; font-weight: 700; color: var(--primary-dark); margin: 0; }
-        .location { color: var(--text-muted); font-size: 15px; margin-top: 5px; }
+        .profile-name {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        .location-info {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
 
         /* GRID UNTUK SUMMARY & OBJECTIVE */
         .grid-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 24px;
             margin-top: 30px;
         }
 
         .card {
             background: #ffffff;
-            border: 1px solid #e2e8f0;
-            padding: 25px;
-            border-radius: 12px;
+            border: 1px solid #f1f5f9;
+            padding: 24px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #e2e8f0;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
         }
 
         .card h3 {
             margin-top: 0;
-            font-size: 16px;
+            font-size: 14px;
             color: var(--accent-blue);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
         }
 
-        .card p { font-size: 14.5px; line-height: 1.6; color: var(--text-main); margin-bottom: 0; }
+        .card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-main);
+            margin: 0;
+        }
 
         /* TOMBOL ACTIONS */
         .actions {
-            margin-top: 40px;
+            margin-top: 45px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 16px;
             align-items: center;
         }
 
         .btn {
             width: 100%;
-            max-width: 400px;
-            padding: 16px;
-            border-radius: 12px;
+            max-width: 450px;
+            padding: 18px;
+            border-radius: 16px;
             text-decoration: none;
             font-weight: 700;
             font-size: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.3s;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
         }
 
-        .btn-download { background: black; color: white; }
-        .btn-download:hover { opacity: 0.8; transform: translateY(-2px); }
+        .btn-download {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+
+        .btn-download:hover {
+            background-color: #000;
+            transform: translateY(-2px);
+        }
 
         .btn-whatsapp {
-            background: white;
+            background-color: transparent;
             color: var(--wa-green);
             border: 2px solid var(--wa-green);
         }
 
         .btn-whatsapp:hover {
-            background: var(--wa-green);
+            background-color: var(--wa-green);
             color: white;
+            transform: translateY(-2px);
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 640px) {
             .grid-container { grid-template-columns: 1fr; }
-            .banner h1 { font-size: 1.8rem; }
+            .profile-name { font-size: 28px; }
+            .content { padding: 30px 20px; }
         }
     </style>
 </head>
 <body>
 
     <div class="main-container">
-        <div class="banner">
-            <h1>Migi Setyo Sugiarto Adi</h1>
-            <p>Food & Beverage Professional | Operations & Store Management</p>
+        <div class="banner-container">
+            <img src="banner.png" alt="Migi Setyo Sugiarto Adi Banner" class="banner-img">
         </div>
 
         <div class="content">
             <div class="profile-title">
-                <div class="badge-linkedin">in Professional Portfolio</div>
-                <h2 class="profile-name">Migi Setyo Sugiarto Adi</h2>
-                <div class="location">📍 Semarang, Central Java, Indonesia </div>
+                <span class="badge-prof">Professional Portfolio</span>
+                <h1 class="profile-name">Migi Setyo Sugiarto Adi</h1>
+                <div class="location-info">
+                    <span>📍</span> Semarang, Central Java, Indonesia | migisetyosa@gmail.com
+                </div>
             </div>
 
             <div class="grid-container">
                 <div class="card">
                     <h3>Executive Summary</h3>
-                    <p>Profesional F&B dengan pengalaman lebih dari 5 tahun di bidang operasional restoran, bar, dan manajemen toko[cite: 2]. Ahli dalam manajemen inventaris, pengendalian biaya (Cost Control), dan kepemimpinan tim.</p>
+                    <p>Profesional Food & Beverage dengan pengalaman lebih dari 5 tahun di bidang operasional restoran, bar, dan manajemen toko. Ahli dalam manajemen inventaris, pengendalian biaya (Cost Control), dan kepemimpinan tim berbasis data.</p>
                 </div>
 
                 <div class="card">
                     <h3>Professional Objective</h3>
-                    <p>Bertekad meningkatkan efisiensi operasional dan pertumbuhan bisnis melalui posisi Food & Beverage Operations atau Store Management yang strategis.</p>
+                    <p>Mencari posisi di bidang F&B Operations / Store Management / Purchasing untuk berkontribusi langsung dalam peningkatan efisiensi operasional dan pertumbuhan bisnis.</p>
                 </div>
             </div>
 
             <div class="actions">
                 <a href="Migi Setyo Sugiarto Adi (9).pdf" class="btn btn-download" download>
-                    Dapatkan CV Lengkap (PDF)
+                    Unduh CV Lengkap (PDF)
                 </a>
                 
-                <a href="https://wa.me/628112683668?text=Halo%20Migi,%20saya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi." 
+                <a href="https://wa.me/628112683668?text=Halo%20Migi,%20saya%20tertarik%20dengan%20profil%20profesional%20Anda." 
                    class="btn btn-whatsapp" target="_blank">
                     Hubungi via WhatsApp
                 </a>
