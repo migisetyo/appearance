@@ -1,49 +1,44 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Migi Setyo Sugiarto Adi | F&B Operations Specialist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Professional Profile - Migi Setyo Sugiarto Adi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --whatsapp: #22c55e;
+            --primary-dark: #0f172a;
+            --accent-blue: #2563eb;
+            --wa-green: #25d366;
             --text-main: #1e293b;
             --text-muted: #64748b;
-            --bg: #f8fafc;
-            --white: #ffffff;
+            --bg-site: #f1f5f9;
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-site);
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
-        .portfolio-container {
-            background: var(--white);
-            max-width: 800px;
-            width: 95%;
-            margin: 40px 0;
-            border-radius: 32px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+        .main-container {
+            background: white;
+            max-width: 850px;
+            width: 100%;
+            border-radius: 20px;
             overflow: hidden;
-            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* Banner Section */
+        /* BANNER (Menyamai Visual Foto) */
         .banner {
             width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+            height: 300px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #2563eb 100%);
+            /* Jika ada file gambar banner, aktifkan baris di bawah ini: */
+            /* background: url('banner.jpg') center/cover no-repeat; */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -51,142 +46,121 @@
             color: white;
             text-align: center;
             padding: 20px;
-            box-sizing: border-box;
         }
 
-        .banner h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            letter-spacing: -1px;
-        }
+        .banner h1 { font-size: 2.2rem; margin: 0; letter-spacing: -1px; }
+        .banner p { font-size: 1.1rem; opacity: 0.9; margin-top: 10px; font-weight: 300; }
 
-        .banner p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-top: 10px;
-        }
+        .content { padding: 40px; }
 
-        .main-content {
-            padding: 40px;
-        }
-
-        .header-meta {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .badge {
-            background: #eff6ff;
-            color: var(--accent);
-            padding: 6px 16px;
-            border-radius: 100px;
+        .profile-title { text-align: left; margin-bottom: 30px; }
+        .badge-linkedin {
+            display: inline-flex;
+            align-items: center;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 5px 12px;
+            border-radius: 50px;
             font-size: 13px;
             font-weight: 700;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        .content-grid {
+        .profile-name { font-size: 32px; font-weight: 700; color: var(--primary-dark); margin: 0; }
+        .location { color: var(--text-muted); font-size: 15px; margin-top: 5px; }
+
+        /* GRID UNTUK SUMMARY & OBJECTIVE */
+        .grid-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-top: 20px;
+            gap: 20px;
+            margin-top: 30px;
         }
 
-        .info-card {
-            background: #f8fafc;
-            padding: 24px;
-            border-radius: 20px;
+        .card {
+            background: #ffffff;
             border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 12px;
         }
 
-        h3 {
-            font-size: 14px;
-            color: var(--accent);
-            text-transform: uppercase;
+        .card h3 {
             margin-top: 0;
-            margin-bottom: 12px;
-            letter-spacing: 0.05em;
+            font-size: 16px;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        p {
-            font-size: 15px;
-            line-height: 1.6;
-            margin: 0;
-        }
+        .card p { font-size: 14.5px; line-height: 1.6; color: var(--text-main); margin-bottom: 0; }
 
+        /* TOMBOL ACTIONS */
         .actions {
             margin-top: 40px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 15px;
+            align-items: center;
         }
 
         .btn {
+            width: 100%;
+            max-width: 400px;
             padding: 16px;
-            border-radius: 16px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
-            text-align: center;
-            transition: 0.3s;
+            font-size: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            transition: 0.3s;
         }
 
-        .btn-download {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-download:hover {
-            background: #000;
-            transform: translateY(-2px);
-        }
+        .btn-download { background: black; color: white; }
+        .btn-download:hover { opacity: 0.8; transform: translateY(-2px); }
 
         .btn-whatsapp {
-            border: 2px solid var(--whatsapp);
-            color: var(--whatsapp);
+            background: white;
+            color: var(--wa-green);
+            border: 2px solid var(--wa-green);
         }
 
         .btn-whatsapp:hover {
-            background: var(--whatsapp);
+            background: var(--wa-green);
             color: white;
-            transform: translateY(-2px);
         }
 
-        @media (max-width: 640px) {
-            .content-grid { grid-template-columns: 1fr; }
+        @media (max-width: 600px) {
+            .grid-container { grid-template-columns: 1fr; }
             .banner h1 { font-size: 1.8rem; }
-            .main-content { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="portfolio-container">
+    <div class="main-container">
         <div class="banner">
             <h1>Migi Setyo Sugiarto Adi</h1>
             <p>Food & Beverage Professional | Operations & Store Management</p>
         </div>
 
-        <div class="main-content">
-            <div class="header-meta">
-                <span class="badge">Professional Profile</span>
-                <div style="color: var(--text-muted); font-size: 14px;">Semarang, Indonesia | migisetyosa@gmail.com</div>
+        <div class="content">
+            <div class="profile-title">
+                <div class="badge-linkedin">in Professional Portfolio</div>
+                <h2 class="profile-name">Migi Setyo Sugiarto Adi</h2>
+                <div class="location">📍 Semarang, Central Java, Indonesia </div>
             </div>
 
-            <div class="content-grid">
-                <div class="info-card">
-                    <h3>Tentang Saya</h3>
-                    <p>Profesional Food & Beverage dengan pengalaman lebih dari 5 tahun di operasional restoran, bar, dan manajemen toko[cite: 2]. Ahli dalam mengelola inventory, menekan biaya operasional, dan sistem manajemen berbasis data (Excel)[cite: 4, 5].</p>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Executive Summary</h3>
+                    <p>Profesional F&B dengan pengalaman lebih dari 5 tahun di bidang operasional restoran, bar, dan manajemen toko[cite: 2]. Ahli dalam manajemen inventaris, pengendalian biaya (Cost Control), dan kepemimpinan tim[cite: 34].</p>
                 </div>
 
-                <div class="info-card">
-                    <h3>Tujuan Karier</h3>
-                    <p>Mencari posisi di bidang F&B Operations / Store Management / Purchasing untuk berkontribusi langsung dalam peningkatan efisiensi operasional dan pertumbuhan bisnis[cite: 6].</p>
+                <div class="card">
+                    <h3>Professional Objective</h3>
+                    <p>Bertekad meningkatkan efisiensi operasional dan pertumbuhan bisnis melalui posisi Food & Beverage Operations atau Store Management yang strategis[cite: 6].</p>
                 </div>
             </div>
 
