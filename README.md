@@ -193,7 +193,7 @@
 
             <span class="actions-label">Actions</span>
             <div class="button-group">
-                <a href="Migi Setyo Sugiarto Adi (9).pdf" class="btn btn-download" download>
+                <a href="Migi Setyo Sugiarto Adi (10).pdf" class="btn btn-download" download>
                     DOWNLOAD CV PDF
                 </a>
                 
