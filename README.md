@@ -87,7 +87,7 @@
                     <a href="https://wa.me/628112683668" target="_blank" class="text-gray-400 hover:text-[#22c55e] text-3xl"><i class="fab fa-whatsapp"></i></a>
                 </div>
                 <div class="flex flex-col md:flex-row gap-4 w-full justify-center">
-                    <a href="Migi_Setyo_CV.pdf" download class="bg-black text-white px-10 py-4 rounded-xl font-bold text-center shadow-lg">DOWNLOAD CV (PDF)</a>
+                    <a href="Migi Setyo Sugiarto Adi (10).pdf" download class="bg-black text-white px-10 py-4 rounded-xl font-bold text-center shadow-lg">DOWNLOAD CV (PDF)</a>
                     <a href="https://wa.me/628112683668" target="_blank" class="bg-[#22c55e] text-white px-10 py-4 rounded-xl font-bold text-center shadow-lg">HUBUNGI SAYA</a>
                 </div>
             </div>
