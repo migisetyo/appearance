@@ -94,7 +94,7 @@
         </div>
 
         <footer class="bg-gray-50 p-6 text-center border-t border-gray-100">
-            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-[0.3em]">Migi Setyo Sugiarto Adi &copy; 2024</p>
+            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-[0.3em]">Migi Setyo Sugiarto Adi &copy; 2025</p>
         </footer>
     </div>
 
